@@ -1,0 +1,50 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f0f0f0;
+  margin: 0;
+}
+
+.smiley {
+  width: 200px;
+  height: 200px;
+  background: #ffeb3b;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Eyes */
+.smiley::before,
+.smiley::after {
+  content: '';
+  width: 25px;
+  height: 25px;
+  background: #333;
+  border-radius: 50%;
+  position: absolute;
+  top: 60px;
+}
+
+.smiley::before {
+  left: 50px;
+}
+
+.smiley::after {
+  right: 50px;
+}
+
+/* Smile */
+.mouth {
+  width: 120px;
+  height: 60px;
+  border: 5px solid #333;
+  border-top: none;
+  border-radius: 0 0 60px 60px;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
